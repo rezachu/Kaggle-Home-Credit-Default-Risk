@@ -62,15 +62,15 @@ Each dataframe are presenting in different shape, so we would need to do a lot o
 # 2. Exploring the DataFrame
 
 ### Overall EDA flow
-- 1. Explored the dataframe information to get a brief sense about the data type of each column. If the dtype is float64, we could assume the column would be a numerical data; if the dtype is int32, we could assume the data would be a binary flag, count, days and some sort of categorical data presented in number; if the dtype is object, we could assume it is categorical data. 
+1. Explore the dataframe information to get a brief sense about the data type of each column. If the dtype is float64, we could assume the column would be a numerical data; if the dtype is int32, we could assume the data would be a binary flag, count, days and some sort of categorical data presented in number; if the dtype is object, we could assume it is categorical data. 
 
-- 2. Explore the missing value count. If there are some features that have identical number of missing value, I would assume they are correlated. If the missing value percentage is over 50%, I would consider to drop the feature and I would make the decision by revealing the feature description (A subjective analysis). 
+2. Explore the missing value count. If there are some features that have identical number of missing value, I would assume they are correlated. If the missing value percentage is over 50%, I would consider to drop the feature and I would make the decision by revealing the feature description (A subjective analysis). 
 
-- 3. Explore the distribution of the features.
+3. Explore the distribution of the features.
 
-- 4. Do PCA analysis to see if groups of feature are correlated. And if we could use PCA components to replace the correlated feature in order to reduce the dimension.
+4. Do PCA analysis to see if groups of feature are correlated. And if we could use PCA components to replace the correlated feature in order to reduce the dimension.
 
-- 5. To explore which features need to be standardize, binary encode, label encode or one hot encode.
+5. To explore which features need to be standardize, binary encode, label encode or one hot encode.
 
 The EDA results can be reviewed from the EDA notebooks.
 
@@ -84,7 +84,7 @@ The Data is imbalance since only 8.07% (24,825) target label has difficulties to
 
 ### Since the testing submission required all entries, so I would not drop any row that has missing value. Instead, I would impute value to replace missing value.
 
-## 3.1 Train and Test Dataframe Data Preprocessing Summary:
+## 3.1 - Train and Test Dataframe Data Preprocessing Summary:
 ### Drop feature that has more than 50% of missing value:
 - OWN_CAR_AGE
 - FONDKAPREMONT_MODE
@@ -120,7 +120,7 @@ The Data is imbalance since only 8.07% (24,825) target label has difficulties to
 - document (first six components)
 
 
-## 3.2 Bureau Dataframe Data Preprocessing Summary:
+## 3.2 - Bureau Dataframe Data Preprocessing Summary:
 ### Drop  
 - CREDIT_CURRENCY (99.9% of sample belongs to Currency A, where there is more than 8% of client have diffculties. I believe it would provide useful information in the model.)
 - PCA Frames
@@ -163,7 +163,7 @@ The Data is imbalance since only 8.07% (24,825) target label has difficulties to
 - All Data (Groupby 'SK_ID_CURR')
 
 
-## 3.4 Credit Card Balance Dataframe Data Preprocessing Summary:
+## 3.4 - Credit Card Balance Dataframe Data Preprocessing Summary:
 ### Drop:
 - PCA Frames
 
@@ -193,7 +193,7 @@ The Data is imbalance since only 8.07% (24,825) target label has difficulties to
 - All Data (Groupby 'SK_ID_CURR')
 
 
-## 3.5 POS CASH BALANCE Dataframe Data Preprocessing Summary:
+## 3.5 - POS CASH BALANCE Dataframe Data Preprocessing Summary:
 ### Fillna(0):
 - CNT_INSTALMENT,
 - CNT_INSTALMENT_FUTURE
@@ -212,7 +212,7 @@ The Data is imbalance since only 8.07% (24,825) target label has difficulties to
 - All Data (Groupby 'SK_ID_CURR')
 
 
-## 3.6 Installments_Payments Dataframe Data Preprocessing Summary:
+## 3.6 - Installments_Payments Dataframe Data Preprocessing Summary:
 ### Drop:
 - PCA Frames
 
@@ -230,7 +230,7 @@ The Data is imbalance since only 8.07% (24,825) target label has difficulties to
 - All Data (Groupby 'SK_ID_CURR')
 
 
-## 3.7 Previous Application Dataframe Data Preprocessing Summary:
+## 3.7 - Previous Application Dataframe Data Preprocessing Summary:
 ### Drop: 
 - CNT_PAYMENT
 - RATE_DOWN_PAYMENT,
