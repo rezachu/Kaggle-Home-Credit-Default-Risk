@@ -43,6 +43,7 @@ We would us the data provide by [Kaggle](https://www.kaggle.com/c/home-credit-de
 10. sample_submission.csv
 
 ## Kernel Structure
+```
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Data Size Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,6 +55,7 @@ Size of credit_card_balance data is (3840312, 23)
 Size of POS_CASH_balance data is (10001358, 8)
 Size of previous_application data is (1670214, 37)
 Size of installments_payments data is (13605401, 8)
+```
 
 Each dataframe are presenting in different shape, so we would need to do a lot of data preprocessing and engineering work.
 
